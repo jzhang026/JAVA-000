@@ -27,7 +27,8 @@ public class HelloClassloader extends ClassLoader {
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
-        File f = new File(this.getClass().getResource("../..//Hello.xlass").getPath());
+        new File("./");
+        File f = new File(this.getClass().getResource("./Hello.xlass").getPath());
         int length = (int)f.length();
         byte[] bytes = new byte[length];
         try {
